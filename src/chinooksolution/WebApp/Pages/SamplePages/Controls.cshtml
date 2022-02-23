@@ -1,0 +1,55 @@
+﻿@page
+@model WebApp.Pages.SamplePages.ControlsModel
+@{
+    ViewData["Title"] = "Various Form COntrols";
+}
+@section CustomCSS{
+    <partial name= "_MyCustomCSS"/>
+}
+<h1>Various Form Controls</h1>
+@if(!string.IsNullOrWhiteSpace(Model.Feedback))
+{
+    <p>@Model.Feedback</p>
+}
+<section class="setflex">
+    <div class="onethird">
+        <h3>TextBoxes</h3>
+        <form method="post">
+            <label>
+                Enter an Email
+                <input type="email" asp-for="EmailText" placeholder="enter email"/>
+            </label>
+            <br />
+             <label>
+                Enter a password
+                <input type="password" asp-for="PasswordText" placeholder="enter password"/>
+            </label>
+            <br />
+             <label>
+                Enter a Date
+                <input type="date" asp-for="DateText" />
+            </label>
+            <br/>
+              <label>
+                Enter a time
+                <input type="time" asp-for="TimeText" />
+            </label>
+            <button type="submit" value="textbox" id="theTextButton"
+            name="theTextButton" asp-page-handler="TextBox" >Text Submit</button>
+        </form>
+    </div>
+     <div class="onethird">
+        <h3>Radiobuttons CheckBox TextArea</h3>
+        <form method="post">
+            <button type="submit" value="radiocheckarea" id="theRadioCheckAreaButton"
+            name="theRadioCheckAreaButton" asp-page-handler="RadioCheckArea" >Radio/Check/Area Submit</button>
+        </form>
+    </div>
+     <div class="onethird">
+        <h3>List and Slider</h3>
+        <form method="post">
+            <button type="submit" value="ListSlider" id="theListSliderButton"
+            name="theListSliderButton" asp-page-handler="ListSlider" >Lists/Slider Submit</button>
+        </form>
+    </div>
+</section>
