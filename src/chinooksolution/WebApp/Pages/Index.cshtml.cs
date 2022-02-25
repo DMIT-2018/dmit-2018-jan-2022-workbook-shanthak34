@@ -1,9 +1,11 @@
 ﻿#nullable disable
-using ChinookLibrary.BLL;
-using ChinookLibrary.ViewModels;
+
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-
+#region Additional namespace
+using ChinookLibrary.BLL;
+using ChinookLibrary.ViewModels;
+#endregion
 namespace WebApp.Pages
 {
     public class IndexModel : PageModel

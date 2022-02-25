@@ -1,7 +1,7 @@
 #nullable disable
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-
+using ChinookLibrary.ViewModels;
 
 namespace WebApp.Pages.SamplePages
 {
@@ -102,11 +102,11 @@ namespace WebApp.Pages.SamplePages
 
 
     //Insted of this class we use (using ChinookSystem.ViewModels;) namespace
-   public class SelectionList
-  {
+  // public class SelectionList
+  //{
         
-       public int ValueId { get; set; }
+      // public int ValueId { get; set; }
         
-       public string DisplayText { get; set; }
-    }
+      // public string DisplayText { get; set; }
+   // }
 }
